@@ -1,0 +1,15 @@
+ABSTRACT (CONDENSED VERSION - 348 words)
+
+LegalEase: AI-Powered Legal Document Simplifier for Common People
+
+Legal documents in India use complex terminology that common people struggle to understand, leading to exploitation through unfair contracts and inability to exercise legal rights. While legal AI tools exist globally (Legalese Decoder, DetangleAI) and in India (CaseMine, LawSimpl, Draft Bot Pro), they primarily target legal professionals for case research and contract drafting—not helping ordinary citizens understand their personal documents. This leaves a critical gap where common Indians cannot comprehend rental agreements, employment contracts, or property documents they encounter daily.
+
+This project develops an LLM/SLM-based system specifically designed for everyday Indian citizens rather than legal professionals. Unlike existing professional-focused tools, this system provides seven key differentiators: (1) targets common people instead of lawyers; (2) focuses on personal documents (rentals, employment, property) rather than case law; (3) incorporates Indian legal context (IPC, BNS, cultural norms); (4) offers multilingual support (English, Tamil, Hindi) versus English-only global tools; (5) takes educational approach building legal literacy; (6) completely free with mobile-first design versus paid subscriptions; and (7) provides risk detection calibrated for non-experts with accessible explanations.
+
+The system employs fine-tuned language models (Llama 3.2/Gemma 2) with Retrieval Augmented Generation (RAG) architecture. Key features include intelligent text simplification, automated risk detection with severity ratings, interactive Q&A for document queries, key information extraction (obligations, deadlines, financial terms), multilingual support, and visual side-by-side comparisons. Implementation uses Python, Hugging Face Transformers, LangChain, FAISS, and Gradio/Streamlit. Models are fine-tuned using QLoRA on curated Indian legal documents with expert-validated simplifications.
+
+Evaluation combines readability metrics (improving from grade 12 to grade 6), semantic similarity measures (85% meaning preservation), and human evaluation by both non-legal users (comprehension) and legal experts (accuracy). User studies assess improved understanding and risk identification capabilities.
+
+The primary contribution is democratizing legal understanding for India's 1.4 billion citizens, particularly underserved populations lacking legal counsel access. This fills the gap that existing professional-focused legal AI ignores, demonstrating how AI can achieve genuine social impact through accessibility rather than perpetuating technological divides.
+
+Keywords: Legal Document Simplification, Large Language Models, NLP, RAG, Legal Technology, Accessibility, Social Impact AI

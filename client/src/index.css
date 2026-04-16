@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'DM Sans', sans-serif;
+    --font-display: 'Libre Baskerville', serif;
+
+    /* A refined, trustworthy palette: Muted Emerald, Deep Navy, Crisp White */
+    --background: 210 33% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 198 93% 18%; /* Deep Oxford Blue */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 198 20% 94%;
+    --secondary-foreground: 198 93% 10%;
+
+    --muted: 198 15% 90%;
+    --muted-foreground: 198 10% 45%;
+
+    --accent: 31 90% 50%; /* Golden Harvest Accent */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 44%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 198 20% 88%;
+    --input: 198 20% 88%;
+    --ring: 198 93% 18%;
+
+    --radius: 0.5rem;
+    
+    --sidebar-background: 198 93% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 198 93% 18%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 198 40% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 198 40% 15%;
+    --sidebar-ring: 198 93% 18%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/10 selection:text-primary;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight text-slate-950 font-semibold;
+  }
+}
+
+@layer utilities {
+  .hover-elevate {
+    @apply transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 active:scale-[0.99];
+  }
+  
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-lg border border-white/40 shadow-sm;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .card-gradient {
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--secondary)) 100%);
+  }
+}
+
+/* Custom Markdown Styles */
+.markdown-body h1 { @apply text-2xl font-bold mt-8 mb-4 font-display text-slate-950 border-b pb-2; }
+.markdown-body h2 { @apply text-xl font-bold mt-6 mb-3 font-display text-slate-900; }
+.markdown-body h3 { @apply text-lg font-bold mt-5 mb-2 font-display text-slate-800; }
+.markdown-body p { @apply mb-4 leading-relaxed text-slate-700; }
+.markdown-body ul { @apply list-disc pl-6 mb-6 space-y-2; }
+.markdown-body ol { @apply list-decimal pl-6 mb-6 space-y-2; }
+.markdown-body li { @apply text-slate-700; }
+.markdown-body strong { @apply font-semibold text-slate-950; }
+.markdown-body blockquote { @apply border-l-4 border-primary/20 pl-4 italic text-slate-600 my-6 bg-slate-50/50 py-2 rounded-r-lg; }
+.markdown-body hr { @apply my-8 border-slate-200; }

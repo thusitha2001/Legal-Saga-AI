@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "NO0o4NdCgOqXFAwbYPEbL"
+uri = "file://LegalEase_Project_Report.md"
+type = "text"
+title = "LegalEase — Full Academic Mini Project Report"
+
+[[outputs]]
+id = "mcLly7gTczopEJmlFq_rO"
+uri = "file://LegalEase_Project_Documentation.docx"
+type = "word_document"
+title = "LegalEase — Complete Project Documentation"
